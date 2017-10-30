@@ -1,0 +1,23 @@
+slider_gazebo:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # Position Controllers ---------------------------------------
+  left_base_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: left_base_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  base_to_left_leg_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: base_to_left_leg
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  right_base_joint_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: right_base_joint
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  base_to_right_leg_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: base_to_right_leg
+    pid: {p: 100.0, i: 0.01, d: 10.0}

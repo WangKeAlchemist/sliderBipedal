@@ -1,0 +1,43 @@
+<robot
+  name="KE_LEG.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00363461682951538 0.00871575470714108 -0.0145707177613303"
+        rpy="0 0 0" />
+      <mass
+        value="5.17294661672777" />
+      <inertia
+        ixx="0.367409371299878"
+        ixy="7.15559782919348E-18"
+        ixz="-4.29128282553915E-19"
+        iyy="0.00480821997190937"
+        iyz="-1.52552633775921E-18"
+        izz="0.367409371299878" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KE_LEG.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://KE_LEG.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+</robot>

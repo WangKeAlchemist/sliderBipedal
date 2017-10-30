@@ -1,0 +1,63 @@
+mhr:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50  
+  
+  # Position Controllers ---------------------------------------
+  upper_body_roll_position_controller:
+    type: position_controllers/JointPositionController
+    joint: UpperBodyRollJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  upper_body_yaw_position_controller:
+    type: position_controllers/JointPositionController
+    joint: UpperBodyYawJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  right_hip_yaw_position_controller:
+    type: position_controllers/JointPositionController
+    joint: RightHipYawJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  right_hip_roll_position_controller:
+    type: position_controllers/JointPositionController
+    joint: RightHipRollJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  right_hip_pitch_position_controller:
+    type: position_controllers/JointPositionController
+    joint: RightHipPitchJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  right_knee_position_controller:
+    type: position_controllers/JointPositionController
+    joint: RightKneeJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  right_ankle_roll_position_controller:
+    type: position_controllers/JointPositionController
+    joint: RightAnkleRollJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  right_ankle_pitch_position_controller:
+    type: position_controllers/JointPositionController
+    joint: RightAnklePitchJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  left_hip_yaw_position_controller:
+    type: position_controllers/JointPositionController
+    joint: LeftHipYawJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  left_hip_roll_position_controller:
+    type: position_controllers/JointPositionController
+    joint: LeftHipRollJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  left_hip_pitch_position_controller:
+    type: position_controllers/JointPositionController
+    joint: LeftHipPitchJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  left_knee_position_controller:
+    type: position_controllers/JointPositionController
+    joint: LeftKneeJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  left_ankle_roll_position_controller:
+    type: position_controllers/JointPositionController
+    joint: LeftAnkleRollJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}
+  left_ankle_pitch_position_controller:
+    type: position_controllers/JointPositionController
+    joint: LeftAnklePitchJoint
+    pid: {p: 0.0001, i: 0., d: 0.001}

@@ -1,0 +1,827 @@
+<?xml version="1.0"?>
+
+
+<robot name="inverted_pendulum" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+
+  <!-- Include materials -->
+
+    <material name="Black">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+
+    <material name="Red">
+        <color rgba="0.0 0.0 0.0 1.0"/>
+    </material>
+
+    <material name="White">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+    </material>
+
+
+  <property name="deg_to_rad" value="0.01745329251994329577"/>
+
+  <!-- Constants -->
+  <property name="M_SCALE" value="0.001 0.001 0.001"/> 
+  <property name="M_PI" value="3.14159"/>
+
+  <!-- Shoulder pan link properties -->
+  <property name="shoulder_pan_width" value="0.04" />
+  <property name="shoulder_pan_len" value="0.08" />
+
+
+  <!-- Shoulder pitch link properties -->
+  <property name="shoulder_pitch_len" value="0.14" />
+  <property name="shoulder_pitch_width" value="0.04" />
+  <property name="shoulder_pitch_height" value="0.04" />
+
+
+  <!-- Elbow roll link properties -->
+  <property name="elbow_roll_width" value="0.02" />
+  <property name="elbow_roll_len" value="0.06" />
+
+
+  <!-- Elbow pitch link properties -->
+  <property name="elbow_pitch_len" value="0.22" />
+  <property name="elbow_pitch_width" value="0.04" />
+  <property name="elbow_pitch_height" value="0.04" />
+
+
+  <!-- Wrist roll link properties -->
+  <property name="wrist_roll_width" value="0.02" />
+  <property name="wrist_roll_len" value="0.04" />
+
+
+  <!-- wrist pitch link properties -->
+  <property name="wrist_pitch_len" value="0.06" />
+  <property name="wrist_pitch_width" value="0.04" />
+  <property name="wrist_pitch_height" value="0.04" />
+
+
+  <!-- Gripper roll link properties -->
+  <property name="gripper_roll_width" value="0.04" />
+  <property name="gripper_roll_len" value="0.02" />
+
+
+  <!-- Left gripper -->
+  <property name="left_gripper_len" value="0.08" />
+  <property name="left_gripper_width" value="0.01" />
+  <property name="left_gripper_height" value="0.01" />
+
+
+  <!-- Right gripper -->
+  <property name="right_gripper_len" value="0.08" />
+  <property name="right_gripper_width" value="0.01" />
+  <property name="right_gripper_height" value="0.01" />
+
+
+
+  <!-- Right gripper -->
+  <property name="grasp_frame_len" value="0.02" />
+  <property name="grasp_frame_width" value="0.02" />
+  <property name="grasp_frame_height" value="0.02" />
+
+
+   <xacro:macro name="inertial_matrix" params="mass">
+      <inertial>
+      	<mass value="${mass}" />
+        <inertia ixx="0.10" ixy="0.0" ixz="0.0" iyy="0.15" iyz="0.0" izz="0.210" />
+      </inertial>
+   </xacro:macro>
+
+   <xacro:macro name="inertiall" params="mass cg_x cg_y cg_z rotx:=0 roty:=0 rotz:=0 ixx iyy izz ixy ixz iyz">
+      <inertial>
+        <origin xyz="${cg_x/1000} ${cg_y/1000} ${cg_z/1000}" rpy="${rotx} ${roty} ${rotz}"/>
+      	<mass value="${mass/1000}" />
+        <inertia ixx="${ixx/1000000000}" ixy="${ixy/1000000000}" ixz="${ixz/1000000000}" iyy="${iyy/1000000000}" iyz="${iyz/1000000000}" izz="${izz/1000000000}" />
+      </inertial>
+
+   </xacro:macro>
+
+   <xacro:macro name="transmission_block" params="joint_name">
+	  <transmission name="tran1">
+	    <type>transmission_interface/SimpleTransmission</type>
+	    <joint name="${joint_name}">
+	      <hardwareInterface>EffortJointInterface</hardwareInterface>
+	    </joint>
+	    <actuator name="motor1">
+	      <hardwareInterface>EffortJointInterface</hardwareInterface>
+	      <mechanicalReduction>1</mechanicalReduction>
+	    </actuator>
+	  </transmission>
+   </xacro:macro>
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+ <link name="UpperBody">
+
+    <visual>
+      <origin xyz="-0.17067 -0.00389 1.23422" rpy="0 0 0" />
+      <geometry>
+		<mesh filename="package://mhr/meshes/SimpleMeshes/UpperBody.STL"/>
+      </geometry>
+
+    </visual>
+
+    <collision>
+      <origin xyz="-0.17067 -0.00389 1.23422" rpy="0 0 0" />
+      <geometry>
+		<mesh filename="package://mhr/meshes/SimpleMeshes/UpperBody.STL"/>
+      </geometry>
+      </collision>>
+
+	<xacro:inertiall mass="0.0003" cg_x="0" cg_y="0.0" cg_z="0" ixx="1" iyy="1" izz="1" ixy="0" ixz="0" iyz="0"/>
+
+  </link>
+
+  <gazebo reference="UpperBody">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+<!-- Because KDL does not support root link with an Inertial, Here I am going to add an extra dummy link to implement Upper body inertia.-->
+
+
+  <joint name="UpperBodyDummyJoint" type="fixed">
+    <parent link="UpperBody"/>
+    <child link="UpperBodyDummy"/>
+    <origin xyz="-0.17067 -0.00389 1.23422" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="30" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+
+
+
+<link name="UpperBodyDummy">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+				<sphere radius="0.01" />
+            </geometry>
+    </visual>
+    <collision>
+      <geometry>
+		<sphere radius="0.01" />
+      </geometry>
+      </collision>>
+
+	<xacro:inertiall mass="24000" cg_x="${13.89}" cg_y="0.0" cg_z="219.09" ixx="314208197.14" iyy="294833229.41" izz="121628405.47" ixy="-44131.30" ixz="8374723.92" iyz="296716.85"/>
+
+  </link>
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="UpperBodyYawJoint" type="revolute">
+    <parent link="UpperBody"/>
+    <child link="Trunk"/>
+    <origin xyz="-0.17067 -0.00389 1.23422" rpy="0 0 0" />
+    <axis xyz="0 0 1" />
+    <limit effort="210" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- TRUNK -->
+  <link name="Trunk" >
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/Trunk.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/Trunk.STL"/>
+      </geometry>
+      <material name="Red" />
+    </collision>
+	<xacro:inertiall mass="1133.07" cg_x="17.54" cg_y="-0.26" cg_z="-42.93" ixx="1065575.62" iyy="185930.07" izz="1839870.65" ixy="-8750.49" ixz="-208094.16" iyz="6666.18"/>
+  </link>
+
+  <gazebo reference="Trunk">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="UpperBodyRollJoint" type="revolute">
+    <parent link="Trunk"/>
+    <child link="Pelvis"/>
+    <origin xyz="0.08189 0.00086 -0.06312" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit effort="210" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- PELVIS -->
+  <link name="Pelvis" >
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/Pelvis.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/Pelvis.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="7472.93" cg_x="63.2" cg_y="0.0" cg_z="0.0" ixx="79112730.89" iyy="17923717.96" izz="80935431.73" ixy="36364.08" ixz="138813.04" iyz="23127.97"/>
+  </link>
+
+  <gazebo reference="Pelvis">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="RightHipYawJoint" type="revolute">
+    <parent link="Pelvis"/>
+    <child link="RightHipYaw"/>
+    <origin xyz="0.065 -0.12863 -0.03096" rpy="0 0 0" />
+    <axis xyz="0.0 0.22495 0.97437" />
+    <limit effort="219" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- RIGHT HIP YAW -->
+  <link name="RightHipYaw" >
+    <visual>
+      <origin xyz="0 0 0" rpy="-0.22689280275926284500007979990352 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightHipYaw.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="-0.22689280275926284500007979990352 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightHipYaw.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="3535.57" cg_x="-101.39" cg_y="0.02" cg_z="-100.18" ixx="10421246.55" iyy="38441192.21" izz="31420130.57" ixy="-7651.15" ixz="10060975.82" iyz="-31359.08"/>
+  </link>
+
+  <gazebo reference="RightHipYaw">
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="RightHipRollJoint" type="revolute">
+    <parent link="RightHipYaw"/>
+    <child link="RightHipRoll"/>
+    <origin xyz="0.000 -0.0292 -0.1267" rpy="0 0 0" />  <!-- Correct this 0.006 -->
+    <axis xyz="1 0 0" />
+    <limit effort="454" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- RIGHT HIP ROLL -->
+  <link name="RightHipRoll" >
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightHipRoll.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightHipRoll.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="3611.31" cg_x="-2.36" cg_y="-4.88" cg_z="2.47" ixx="11156369.03" iyy="7706781.92" izz="13659170.92" ixy="-43012.97" ixz="36723.18" iyz="-787845.92"/>
+  </link>
+
+  <gazebo reference="RightHipRoll">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="RightHipPitchJoint" type="revolute">
+    <parent link="RightHipRoll"/>
+    <child link="RightThigh"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="454" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- RIGHT THIGH -->
+  <link name="RightThigh" >
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightThigh.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightThigh.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="11276.06" cg_x="-9.61" cg_y="-0.24" cg_z="-254.08" ixx="282696096.60" iyy="259088243.98" izz="62872309.45" ixy="618267.96" ixz="-1767158.51" iyz="5912403.62"/>
+  </link>
+
+  <gazebo reference="RightThigh">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="RightKneeJoint" type="revolute">
+    <parent link="RightThigh"/>
+    <child link="RightShank"/>
+    <origin xyz="0 0.0 -0.465" rpy="0 0 0" />   <!-- Corrct origin position in y direction -->
+    <axis xyz="0 1 0" />
+    <limit effort="450" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- RIGHT SHANK -->
+  <link name="RightShank" >
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightShank.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightShank.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="5858.25" cg_x="-0.38" cg_y="0.56" cg_z="-161.51" ixx="117261210.29" iyy="116764256.27" izz="13370603.73" ixy="-91498.91" ixz="10566267.87" iyz="360019.16"/>
+  </link>
+
+  <gazebo reference="RightShank">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="RightAnkleRollJoint" type="revolute">
+    <parent link="RightShank"/>
+    <child link="RightAnkleUniversal"/>
+    <origin xyz="0 0 -0.430" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit effort="300" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- RIGHT ANKLE UNIVERSAL -->
+  <link name="RightAnkleUniversal" >
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightAnkleUniversal.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightAnkleUniversal.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="211.88" cg_x="-2.38" cg_y="-2.07" cg_z="0.0" ixx="71948.82" iyy="67893.34" izz="131430.82" ixy="-1042.08" ixz="0.01" iyz="0.15"/>
+  </link>
+
+  <gazebo reference="RightAnkleUniversal">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="RightAnklePitchJoint" type="revolute">
+    <parent link="RightAnkleUniversal"/>
+    <child link="RightFoot"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="300" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="10" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- RIGHT FOOT -->
+  <link name="RightFoot" >
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightFoot.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <!--<origin xyz="0 0 ${(-118.47+ 10/2)/1000}" rpy="0 0 0" />-->
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/RightFoot.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="3886.27" cg_x="23.42" cg_y="-1.22" cg_z="-82.16" ixx="17934994.60" iyy="39037278.03" izz="50527987.56" ixy="-62332.48" ixz="-716025.29" iyz="-391190.95"/>
+  </link>
+
+  <gazebo reference="RightFoot">
+    <material>Gazebo/Red</material>
+    <kp>8000000.0</kp>
+    <kd>1000.0</kd>
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
+    <maxVel>1.0</maxVel>
+    <fdir1>1.0 0.0 0.0</fdir1>-->
+  </gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="LeftHipYawJoint" type="revolute">
+    <parent link="Pelvis"/>
+    <child link="LeftHipYaw"/>
+    <origin xyz="0.065 0.12863 -0.03096" rpy="0 0 0" />
+    <axis xyz="0.0 -0.22495 0.97437" />
+    <limit effort="219" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- LEFT HIP YAW -->
+  <link name="LeftHipYaw" >
+    <visual>
+      <origin xyz="0 0 0" rpy="0.22689280275926284500007979990352 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftHipYaw.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 0" rpy="0.22689280275926284500007979990352 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftHipYaw.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="3535.57" cg_x="-101.39" cg_y="-0.02" cg_z="-100.18" ixx="10421246.55" iyy="38441192.21" izz="31420130.57" ixy="7651.15" ixz="10060975.82" iyz="31359.08"/>
+  </link>
+
+  <gazebo reference="LeftHipYaw">
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="LeftHipRollJoint" type="revolute">
+    <parent link="LeftHipYaw"/>
+    <child link="LeftHipRoll"/>
+    <origin xyz="0.000 0.0292 -0.1267" rpy="0 0 0" />  <!-- Correct orign in x directio (exact value = 0.006) -->
+    <axis xyz="1 0 0" />
+    <limit effort="454" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- LEFT HIP ROLL -->
+  <link name="LeftHipRoll" >
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftHipRoll.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftHipRoll.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="3611.31" cg_x="-2.36" cg_y="4.88" cg_z="2.47" ixx="11156369.03" iyy="7706781.92" izz="13659170.92" ixy="43012.97" ixz="36723.18" iyz="787845.92"/>
+  </link>
+
+  <gazebo reference="LeftHipRoll">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="LeftHipPitchJoint" type="revolute">
+    <parent link="LeftHipRoll"/>
+    <child link="LeftThigh"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="454" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- LEFT THIGH -->
+  <link name="LeftThigh" >
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftThigh.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftThigh.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="11276.06" cg_x="-9.61" cg_y="0.24" cg_z="-254.08" ixx="282696096.60" iyy="259088243.98" izz="62872309.45" ixy="-618267.96" ixz="-1767158.51" iyz="-5912403.62"/>
+  </link>
+
+  <gazebo reference="LeftThigh">
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="LeftKneeJoint" type="revolute">
+    <parent link="LeftThigh"/>
+    <child link="LeftShank"/>
+    <origin xyz="0 0.000 -0.465" rpy="0 0 0" />  <!-- Correct origin y position (exact value = 0.010) -->
+    <axis xyz="0 1 0" />
+    <limit effort="450" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- LEFT SHANK -->
+  <link name="LeftShank" >
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftShank.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftShank.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="5858.25" cg_x="-0.38" cg_y="-0.56" cg_z="-161.51" ixx="117261210.29" iyy="116764256.27" izz="13370603.73" ixy="91498.91" ixz="10566267.87" iyz="-360019.16"/>
+  </link>
+
+  <gazebo reference="LeftShank">
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="LeftAnkleRollJoint" type="revolute">
+    <parent link="LeftShank"/>
+    <child link="LeftAnkleUniversal"/>
+    <origin xyz="0 0 -0.430" rpy="0 0 0" />
+    <axis xyz="1 0 0" />
+    <limit effort="300" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- LEFT ANKLE UNIVERSAL -->
+  <link name="LeftAnkleUniversal" >
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftAnkleUniversal.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftAnkleUniversal.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="211.88" cg_x="-2.38" cg_y="2.07" cg_z="0.0" ixx="71948.82" iyy="67893.34" izz="131430.82" ixy="1042.08" ixz="0.01" iyz="-0.15"/>
+  </link>
+
+  <gazebo reference="LeftAnkleUniversal">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+
+<!--////////////////////////////////////////////////////////////-->
+
+
+  <joint name="LeftAnklePitchJoint" type="revolute">
+    <parent link="LeftAnkleUniversal"/>
+    <child link="LeftFoot"/>
+    <origin xyz="0 0 0" rpy="0 0 0" />
+    <axis xyz="0 1 0" />
+    <limit effort="300" velocity="2" lower="-2.61799387799" upper="1.98394848567"/>
+    <dynamics damping="1" friction="0.2"/>
+  </joint>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+  <!-- LEFT FOOT -->
+  <link name="LeftFoot" >
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftFoot.STL"/>
+      </geometry>
+      <material name="Red" />
+    </visual>
+
+    <collision>
+       <!--<origin xyz="0 0 ${(-118.47+ 10/2)/1000}" rpy="0 0 0" />-->
+      <geometry>
+            <mesh filename="package://mhr/meshes/SimpleMeshes/LeftFoot.STL"/>
+      </geometry>
+    </collision>
+	<xacro:inertiall mass="3886.27" cg_x="23.42" cg_y="1.22" cg_z="-82.16" ixx="17934994.60" iyy="39037278.03" izz="50527987.56" ixy="62332.48" ixz="-716025.29" iyz="391190.95"/>
+  </link>
+
+  <gazebo reference="LeftFoot">
+    <material>Gazebo/Red</material>
+    <kp>8000000.0</kp>
+    <kd>1000.0</kd>
+    <mu1>1.5</mu1>
+    <mu2>1.5</mu2>
+    <maxVel>1.0</maxVel>
+    <fdir1>1.0 0.0 0.0</fdir1>
+  </gazebo>
+
+<!--////////////////////////////////////////////////////////////-->
+<gazebo reference="RightFoot">
+  <sensor name="RightFootForceSensor" type="contact">
+    <always_on>true</always_on>
+    <update_rate>1000.0</update_rate>
+    <contact>
+      <collision>RightFoot_collision</collision>
+    </contact>
+    <plugin name="gripper_bumper" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>RightFootFTS</bumperTopicName>
+      <frameName>RightFoot</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+<gazebo reference="LeftFoot">
+  <sensor name="LeftFootForceSensor" type="contact">
+    <always_on>true</always_on>
+    <update_rate>1000.0</update_rate>
+    <contact>
+      <collision>LeftFoot_collision</collision>
+    </contact>
+    <plugin name="gripper_bumper" filename="libgazebo_ros_bumper.so">
+      <bumperTopicName>LeftFootFTS</bumperTopicName>
+      <frameName>LeftFoot</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+
+
+<!--////////////////////////////////////////////////////////////-->
+<gazebo>    
+    <plugin name="imu_plugin" filename="libgazebo_ros_imu.so">
+        <alwaysOn>true</alwaysOn>       
+        <bodyName>UpperBody</bodyName>
+        <topicName>IMU</topicName>
+        <serviceName>imu_service</serviceName>
+        <gaussianNoise>0.0</gaussianNoise>
+        <updateRate>1000.0</updateRate> 
+    </plugin>
+</gazebo>
+
+
+
+
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+  <!-- Transmissions for ROS Control -->
+
+   <xacro:transmission_block joint_name="UpperBodyYawJoint"/>
+   <xacro:transmission_block joint_name="UpperBodyRollJoint"/>
+   <xacro:transmission_block joint_name="RightHipYawJoint"/>
+   <xacro:transmission_block joint_name="RightHipRollJoint"/>
+   <xacro:transmission_block joint_name="RightHipPitchJoint"/>
+   <xacro:transmission_block joint_name="RightKneeJoint"/>
+   <xacro:transmission_block joint_name="RightAnkleRollJoint"/>
+   <xacro:transmission_block joint_name="RightAnklePitchJoint"/>
+   <xacro:transmission_block joint_name="LeftHipYawJoint"/>
+   <xacro:transmission_block joint_name="LeftHipRollJoint"/>
+   <xacro:transmission_block joint_name="LeftHipPitchJoint"/>
+   <xacro:transmission_block joint_name="LeftKneeJoint"/>
+   <xacro:transmission_block joint_name="LeftAnkleRollJoint"/>
+   <xacro:transmission_block joint_name="LeftAnklePitchJoint"/>
+
+<!--<gazebo reference="shoulder_pan_joint">
+    <provideFeedback>true</provideFeedback>
+    <disablerevoluteJointLumping>true</disablerevoluteJointLumping>
+</gazebo> -->
+
+
+
+
+
+  <!-- ros_control plugin -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/mhr</robotNamespace>
+    </plugin>
+  </gazebo> 
+ 
+
+
+
+</robot>

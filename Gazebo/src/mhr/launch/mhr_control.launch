@@ -1,0 +1,43 @@
+<launch>
+  <!-- Launch Gazebo  -->
+  <include file="$(find mhr)/launch/mhr_world.launch" />   
+
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find mhr)/config/mhr_gazebo_control.yaml" command="load"/>
+
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/mhr" args="joint_state_controller
+					upper_body_roll_position_controller
+					upper_body_yaw_position_controller
+					right_hip_yaw_position_controller
+					right_hip_roll_position_controller
+					right_hip_pitch_position_controller
+					right_knee_position_controller
+					right_ankle_roll_position_controller
+					right_ankle_pitch_position_controller
+					left_hip_yaw_position_controller
+					left_hip_roll_position_controller
+					left_hip_pitch_position_controller
+					left_knee_position_controller
+					left_ankle_roll_position_controller
+					left_ankle_pitch_position_controller
+"/>
+
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+	respawn="false" output="screen">
+    <remap from="/joint_states" to="/mhr/joint_states" />
+  </node>
+
+  <node name="js" pkg="mhr" type="js"> </node>
+
+  <node name="ForceSensor" pkg="mhr" type="fs"> </node>
+
+  <node name="Feeding_PID_ctrls" pkg="mhr" type="pid_feed"> </node>
+
+
+</launch>

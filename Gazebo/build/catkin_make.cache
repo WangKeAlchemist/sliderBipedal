@@ -1,0 +1,2 @@
+gazebo_ros_demos/custom_plugin_tutorial:gazebo_ros_demos/rrbot_control:gazebo_ros_demos/rrbot_description:gazebo_ros_demos/rrbot_gazebo:mhr:slider_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/robin/Documents/slider_bipedal/Gazebo/devel -DCMAKE_INSTALL_PREFIX=/home/robin/Documents/slider_bipedal/Gazebo/install -G Unix Makefiles

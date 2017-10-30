@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<robot name="slider" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<material name="blue">
+    <color rgba="0 0 0.8 1"/>
+  </material>
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size = "0.152 0.178 0.16"/>
+      </geometry>
+      <material name="blue"/>
+      <origin rpy="0 0 0" xyz="0 0 0.6"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size = "0.152 0.178 0.16"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0.6"/>
+    </collision>
+    <inertial>
+      <origin xyz="-0.016 -0.009 0.6" rpy="0 0 0"/>
+      <mass value="2.8488"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+  <link name="left_base">
+    <visual>	
+      <geometry>
+        <cylinder radius="0.02" length="0.01"/>
+      </geometry>
+      <material name="white"/>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.02" length="0.01"/>
+      </geometry>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+  <joint name="left_base_joint" type="revolute">
+  	<axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-1.5707" upper="1.5707" velocity="0.5"/>
+    <origin rpy="0 0 0" xyz="0 -0.05 0.6"/>
+    <parent link="base_link"/>
+    <child link="left_base"/>
+  </joint>
+
+  <link name="left_leg">
+    <visual>
+      <geometry>
+        <box size = "0.4 0.2 0.942"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size = "0.4 0.2 0.942"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.53572"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="base_to_left_leg" type="prismatic">
+  	<axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-0.3" upper="0.3" velocity="0.5"/>
+    <origin rpy="0 0 0" xyz="0 -0.1 -0.129"/>
+    <parent link="left_base"/>
+    <child link="left_leg"/>
+  </joint>
+
+  <link name="right_base">
+    <visual>	
+      <geometry>
+        <cylinder radius="0.02" length="0.01"/>
+      </geometry>
+      <material name="white"/>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.02" length="0.01"/>
+      </geometry>
+      <origin rpy="1.57 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+  <joint name="right_base_joint" type="revolute">
+  	<axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-1.5707" upper="1.5707" velocity="0.5"/>
+    <origin rpy="0 0 0" xyz="0 0.03 0.6"/>
+    <parent link="base_link"/>
+    <child link="right_base"/>
+  </joint>
+
+  <link name="right_leg">
+    <visual>
+      <geometry>
+        <box size = "0.4 0.2 0.942"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size = "0.4 0.2 0.942"/>
+      </geometry>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1.53572"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+
+
+  <joint name="base_to_right_leg" type="prismatic">
+  	<axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-0.3" upper="0.3" velocity="0.5"/>
+    <origin rpy="0 0 0" xyz="0 0.1 -0.129"/>
+    <parent link="right_base"/>
+    <child link="right_leg"/>
+  </joint>
+
+</robot>

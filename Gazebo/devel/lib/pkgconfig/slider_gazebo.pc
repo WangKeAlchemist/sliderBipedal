@@ -1,0 +1,8 @@
+prefix=/home/robin/Documents/slider_bipedal/Gazebo/devel
+
+Name: slider_gazebo
+Description: Description of slider_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robin/Documents/slider_bipedal/Gazebo/devel/lib 
+Requires: 
