@@ -35,9 +35,10 @@
     <inertial>
       <origin xyz="-0.016 -0.009 0.6" rpy="0 0 0"/>
       <mass value="2.8488"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="8.56" ixy="-1.06" ixz="-1.03" iyy="9.13" iyz="0.74" izz="8.41"/>
     </inertial>
   </link>
+
 
   <link name="left_base">
     <visual>	
@@ -55,9 +56,11 @@
     </collision>
     <inertial>
       <mass value="0.001"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
     </inertial>
   </link>
+
+
 
   <joint name="left_base_joint" type="revolute">
   	<axis xyz="0 1 0"/>
@@ -85,7 +88,7 @@
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="1.53572"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="49.03" ixy="0.0" ixz="0.0" iyy="49.03" iyz="0.087" izz="0.443"/>
     </inertial>
   </link>
 
@@ -115,7 +118,7 @@
     </collision>
     <inertial>
       <mass value="0.001"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0"/>
     </inertial>
   </link>
 
@@ -145,7 +148,7 @@
     <inertial>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <mass value="1.53572"/>
-      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="1.0" iyz="0.0" izz="1.0"/>
+      <inertia ixx="49.03" ixy="0.0" ixz="0.0" iyy="49.03" iyz="0.087" izz="0.443"/>
     </inertial>
   </link>
 
