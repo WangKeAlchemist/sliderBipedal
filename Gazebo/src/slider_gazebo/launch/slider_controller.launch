@@ -1,0 +1,47 @@
+<launch>
+
+  <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+  <arg name="position" default="false"/>  
+  <arg name="torque" default="true"/>  
+  <arg name="paused" default="true"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="gui" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="debug" default="false"/>
+
+  <include file="$(find slider_gazebo)/launch/empty_world.launch">
+    <arg name="debug" value="$(arg debug)" />
+    <arg name="gui" value="$(arg gui)" />
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="headless" value="$(arg headless)"/>
+  </include>
+
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find slider_gazebo)/urdf/slider.urdf'" />  
+
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-urdf -model slider_gazebo -param robot_description"/>
+
+
+  <!-- Run joint position controllers if true -->
+  <group if="$(arg position)">
+    <!-- Include ros_control launch file to load joint position controllers -->
+    <include file="$(find slider_gazebo)/launch/slider_control.launch" />
+
+    <!-- Create node to control joint positions using joint controller -->
+    <node name="slider_joint_positions_node" pkg="slider_gazebo" type="slider_position_controller.py" output="screen" respawn="true" />
+  </group>
+
+  <!-- Run joint torque controllers if true -->
+  <group if="$(arg torque)">
+    <!-- Include ros_control launch file to load joint torque controllers -->
+    <include file="$(find slider_gazebo)/launch/slider_control_torque.launch" />
+
+    <!-- Create node to control joint torques using effort controller -->
+    <node name="slider_joint_torques_node" pkg="slider_gazebo" type="slider_torque_controller.py" output="screen" respawn="true" />
+  </group>
+
+
+
+</launch>
