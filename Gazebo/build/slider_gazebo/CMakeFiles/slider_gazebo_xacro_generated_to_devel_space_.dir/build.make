@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robin/Documents/slider_bipedal/Gazebo/src
+CMAKE_SOURCE_DIR = /home/robin/Documents/kewang/slider_bipedal/Gazebo/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robin/Documents/slider_bipedal/Gazebo/build
+CMAKE_BINARY_DIR = /home/robin/Documents/kewang/slider_bipedal/Gazebo/build
 
 # Utility rule file for slider_gazebo_xacro_generated_to_devel_space_.
 
@@ -63,10 +63,10 @@ slider_gazebo/CMakeFiles/slider_gazebo_xacro_generated_to_devel_space_.dir/build
 .PHONY : slider_gazebo/CMakeFiles/slider_gazebo_xacro_generated_to_devel_space_.dir/build
 
 slider_gazebo/CMakeFiles/slider_gazebo_xacro_generated_to_devel_space_.dir/clean:
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build/slider_gazebo && $(CMAKE_COMMAND) -P CMakeFiles/slider_gazebo_xacro_generated_to_devel_space_.dir/cmake_clean.cmake
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/slider_gazebo && $(CMAKE_COMMAND) -P CMakeFiles/slider_gazebo_xacro_generated_to_devel_space_.dir/cmake_clean.cmake
 .PHONY : slider_gazebo/CMakeFiles/slider_gazebo_xacro_generated_to_devel_space_.dir/clean
 
 slider_gazebo/CMakeFiles/slider_gazebo_xacro_generated_to_devel_space_.dir/depend:
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robin/Documents/slider_bipedal/Gazebo/src /home/robin/Documents/slider_bipedal/Gazebo/src/slider_gazebo /home/robin/Documents/slider_bipedal/Gazebo/build /home/robin/Documents/slider_bipedal/Gazebo/build/slider_gazebo /home/robin/Documents/slider_bipedal/Gazebo/build/slider_gazebo/CMakeFiles/slider_gazebo_xacro_generated_to_devel_space_.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robin/Documents/kewang/slider_bipedal/Gazebo/src /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/slider_gazebo /home/robin/Documents/kewang/slider_bipedal/Gazebo/build /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/slider_gazebo /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/slider_gazebo/CMakeFiles/slider_gazebo_xacro_generated_to_devel_space_.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : slider_gazebo/CMakeFiles/slider_gazebo_xacro_generated_to_devel_space_.dir/depend
 

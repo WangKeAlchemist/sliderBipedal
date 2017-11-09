@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robin/Documents/slider_bipedal/Gazebo/src
+CMAKE_SOURCE_DIR = /home/robin/Documents/kewang/slider_bipedal/Gazebo/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robin/Documents/slider_bipedal/Gazebo/build
+CMAKE_BINARY_DIR = /home/robin/Documents/kewang/slider_bipedal/Gazebo/build
 
 # Utility rule file for clean_test_results.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/robin/Documents/slider_bipedal/Gazebo/build
 include CMakeFiles/clean_test_results.dir/progress.make
 
 CMakeFiles/clean_test_results:
-	/usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/robin/Documents/slider_bipedal/Gazebo/build/test_results
+	/usr/bin/python /opt/ros/kinetic/share/catkin/cmake/test/remove_test_results.py /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/test_results
 
 clean_test_results: CMakeFiles/clean_test_results
 clean_test_results: CMakeFiles/clean_test_results.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robin/Documents/slider_bipedal/Gazebo/src /home/robin/Documents/slider_bipedal/Gazebo/src /home/robin/Documents/slider_bipedal/Gazebo/build /home/robin/Documents/slider_bipedal/Gazebo/build /home/robin/Documents/slider_bipedal/Gazebo/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robin/Documents/kewang/slider_bipedal/Gazebo/src /home/robin/Documents/kewang/slider_bipedal/Gazebo/src /home/robin/Documents/kewang/slider_bipedal/Gazebo/build /home/robin/Documents/kewang/slider_bipedal/Gazebo/build /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

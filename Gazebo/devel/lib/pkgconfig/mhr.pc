@@ -1,8 +1,8 @@
-prefix=/home/robin/Documents/slider_bipedal/Gazebo/devel
+prefix=/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel
 
 Name: mhr
 Description: Description of mhr
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/robin/Documents/slider_bipedal/Gazebo/devel/lib 
+Libs: -L/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib 
 Requires: 

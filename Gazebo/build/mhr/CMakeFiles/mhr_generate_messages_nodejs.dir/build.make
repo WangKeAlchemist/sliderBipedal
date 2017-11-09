@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robin/Documents/slider_bipedal/Gazebo/src
+CMAKE_SOURCE_DIR = /home/robin/Documents/kewang/slider_bipedal/Gazebo/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robin/Documents/slider_bipedal/Gazebo/build
+CMAKE_BINARY_DIR = /home/robin/Documents/kewang/slider_bipedal/Gazebo/build
 
 # Utility rule file for mhr_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ mhr/CMakeFiles/mhr_generate_messages_nodejs.dir/build: mhr_generate_messages_nod
 .PHONY : mhr/CMakeFiles/mhr_generate_messages_nodejs.dir/build
 
 mhr/CMakeFiles/mhr_generate_messages_nodejs.dir/clean:
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build/mhr && $(CMAKE_COMMAND) -P CMakeFiles/mhr_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/mhr && $(CMAKE_COMMAND) -P CMakeFiles/mhr_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : mhr/CMakeFiles/mhr_generate_messages_nodejs.dir/clean
 
 mhr/CMakeFiles/mhr_generate_messages_nodejs.dir/depend:
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robin/Documents/slider_bipedal/Gazebo/src /home/robin/Documents/slider_bipedal/Gazebo/src/mhr /home/robin/Documents/slider_bipedal/Gazebo/build /home/robin/Documents/slider_bipedal/Gazebo/build/mhr /home/robin/Documents/slider_bipedal/Gazebo/build/mhr/CMakeFiles/mhr_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robin/Documents/kewang/slider_bipedal/Gazebo/src /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/mhr /home/robin/Documents/kewang/slider_bipedal/Gazebo/build /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/mhr /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/mhr/CMakeFiles/mhr_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : mhr/CMakeFiles/mhr_generate_messages_nodejs.dir/depend
 

@@ -1,8 +1,8 @@
-prefix=/home/robin/Documents/slider_bipedal/Gazebo/devel
+prefix=/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel
 
 Name: gazebo_tutorials
 Description: Description of gazebo_tutorials
 Version: 0.0.0
 Cflags: 
-Libs: -L/home/robin/Documents/slider_bipedal/Gazebo/devel/lib -lgazebo_tutorials
+Libs: -L/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib -lgazebo_tutorials
 Requires: roscpp gazebo_ros

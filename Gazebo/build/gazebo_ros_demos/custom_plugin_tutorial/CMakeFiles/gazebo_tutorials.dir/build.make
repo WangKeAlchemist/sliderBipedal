@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robin/Documents/slider_bipedal/Gazebo/src
+CMAKE_SOURCE_DIR = /home/robin/Documents/kewang/slider_bipedal/Gazebo/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robin/Documents/slider_bipedal/Gazebo/build
+CMAKE_BINARY_DIR = /home/robin/Documents/kewang/slider_bipedal/Gazebo/build
 
 # Include any dependencies generated for this target.
 include gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/depend.make
@@ -58,17 +58,17 @@ include gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/
 include gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/flags.make
 
 gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o: gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/flags.make
-gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o: /home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/src/simple_world_plugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robin/Documents/slider_bipedal/Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o"
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o -c /home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/src/simple_world_plugin.cpp
+gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o: /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/src/simple_world_plugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o"
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o -c /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/src/simple_world_plugin.cpp
 
 gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.i"
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/src/simple_world_plugin.cpp > CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.i
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/src/simple_world_plugin.cpp > CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.i
 
 gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.s"
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/src/simple_world_plugin.cpp -o CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.s
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/src/simple_world_plugin.cpp -o CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.s
 
 gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o.requires:
 
@@ -88,135 +88,135 @@ gazebo_tutorials_OBJECTS = \
 # External object files for target gazebo_tutorials
 gazebo_tutorials_EXTERNAL_OBJECTS =
 
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/build.make
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libgazebo_ros_api_plugin.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libgazebo_ros_paths_plugin.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libroslib.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librospack.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf2_ros.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libactionlib.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libmessage_filters.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libroscpp.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf2.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librostime.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libcpp_common.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_math.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf2_ros.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libactionlib.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libmessage_filters.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libroscpp.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf2.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librostime.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libcpp_common.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_math.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
-/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robin/Documents/slider_bipedal/Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so"
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gazebo_tutorials.dir/link.txt --verbose=$(VERBOSE)
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/build.make
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libgazebo_ros_api_plugin.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libgazebo_ros_paths_plugin.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libroslib.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librospack.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf2_ros.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libactionlib.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libmessage_filters.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libroscpp.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf2.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librostime.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libcpp_common.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_math.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libignition-math2.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libtinyxml.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf2_ros.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libactionlib.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libmessage_filters.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libroscpp.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libxmlrpcpp.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libtf2.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole_log4cxx.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librosconsole_backend_interface.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libroscpp_serialization.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/librostime.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /opt/ros/kinetic/lib/libcpp_common.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_math.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so: gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so"
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gazebo_tutorials.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/build: /home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so
+gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/build: /home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so
 
 .PHONY : gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/build
 
@@ -225,10 +225,10 @@ gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/requires
 .PHONY : gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/requires
 
 gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/clean:
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_tutorials.dir/cmake_clean.cmake
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_tutorials.dir/cmake_clean.cmake
 .PHONY : gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/clean
 
 gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/depend:
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robin/Documents/slider_bipedal/Gazebo/src /home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial /home/robin/Documents/slider_bipedal/Gazebo/build /home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial /home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robin/Documents/kewang/slider_bipedal/Gazebo/src /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial /home/robin/Documents/kewang/slider_bipedal/Gazebo/build /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gazebo_ros_demos/custom_plugin_tutorial/CMakeFiles/gazebo_tutorials.dir/depend
 

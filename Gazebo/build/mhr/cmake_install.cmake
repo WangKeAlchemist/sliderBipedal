@@ -1,8 +1,8 @@
-# Install script for directory: /home/robin/Documents/slider_bipedal/Gazebo/src/mhr
+# Install script for directory: /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/mhr
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robin/Documents/slider_bipedal/Gazebo/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robin/Documents/kewang/slider_bipedal/Gazebo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,37 +33,37 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mhr/cmake" TYPE FILE FILES "/home/robin/Documents/slider_bipedal/Gazebo/build/mhr/catkin_generated/installspace/mhr-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mhr/cmake" TYPE FILE FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/mhr/catkin_generated/installspace/mhr-msg-paths.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/robin/Documents/slider_bipedal/Gazebo/devel/share/roseus/ros/mhr")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/share/roseus/ros/mhr")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/python2.7/dist-packages/mhr")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/python2.7/dist-packages/mhr")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/python2.7/dist-packages/mhr")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/python2.7/dist-packages/mhr")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robin/Documents/slider_bipedal/Gazebo/build/mhr/catkin_generated/installspace/mhr.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/mhr/catkin_generated/installspace/mhr.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mhr/cmake" TYPE FILE FILES "/home/robin/Documents/slider_bipedal/Gazebo/build/mhr/catkin_generated/installspace/mhr-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mhr/cmake" TYPE FILE FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/mhr/catkin_generated/installspace/mhr-msg-extras.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mhr/cmake" TYPE FILE FILES
-    "/home/robin/Documents/slider_bipedal/Gazebo/build/mhr/catkin_generated/installspace/mhrConfig.cmake"
-    "/home/robin/Documents/slider_bipedal/Gazebo/build/mhr/catkin_generated/installspace/mhrConfig-version.cmake"
+    "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/mhr/catkin_generated/installspace/mhrConfig.cmake"
+    "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/mhr/catkin_generated/installspace/mhrConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mhr" TYPE FILE FILES "/home/robin/Documents/slider_bipedal/Gazebo/src/mhr/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/mhr" TYPE FILE FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/src/mhr/package.xml")
 endif()
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/rrbot_control
+# Install script for directory: /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/rrbot_control
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robin/Documents/slider_bipedal/Gazebo/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robin/Documents/kewang/slider_bipedal/Gazebo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,25 +33,25 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control/catkin_generated/installspace/rrbot_control.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control/catkin_generated/installspace/rrbot_control.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrbot_control/cmake" TYPE FILE FILES
-    "/home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control/catkin_generated/installspace/rrbot_controlConfig.cmake"
-    "/home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control/catkin_generated/installspace/rrbot_controlConfig-version.cmake"
+    "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control/catkin_generated/installspace/rrbot_controlConfig.cmake"
+    "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control/catkin_generated/installspace/rrbot_controlConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrbot_control" TYPE FILE FILES "/home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/rrbot_control/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrbot_control" TYPE FILE FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/rrbot_control/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrbot_control" TYPE DIRECTORY FILES "/home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/rrbot_control/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrbot_control" TYPE DIRECTORY FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/rrbot_control/config")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrbot_control" TYPE DIRECTORY FILES "/home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/rrbot_control/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rrbot_control" TYPE DIRECTORY FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/rrbot_control/launch")
 endif()
 

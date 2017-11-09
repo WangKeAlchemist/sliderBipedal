@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gazebo_tutorials.dir/src/simple_world_plugin.cpp.o"
-  "/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.pdb"
-  "/home/robin/Documents/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so"
+  "/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.pdb"
+  "/home/robin/Documents/kewang/slider_bipedal/Gazebo/devel/lib/libgazebo_tutorials.so"
 )
 
 # Per-language clean rules from dependency scanning.

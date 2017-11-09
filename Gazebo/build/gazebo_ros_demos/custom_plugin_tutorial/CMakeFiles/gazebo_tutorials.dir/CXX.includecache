@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/src/simple_world_plugin.cpp
+/home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/src/simple_world_plugin.cpp
 gazebo/common/Plugin.hh
 -
 ros/ros.h

@@ -35,15 +35,20 @@ def slider_joint_torques_publisher():
 		#Have each joint follow a sine movement of sin(i/100).
 		torque = 9.81
 
-
+		sine_movement = sin(i/500.)
 		#Publish the same sine movement to each joint.
-		if i < 10000:
-			pub1.publish(2.5*torque*1000/(i+1))
-			pub3.publish(1.2*torque*1000/(i+1))
-			pub2.publish(4.1*torque/9.81*1000/(i+1))
-			pub4.publish(4.1*torque/9.81*1000/(i+1))
+		# if i < 10000:
+		# 	pub1.publish(2.5*torque*1000/(i+1))
+		# 	pub3.publish(1.2*torque*1000/(i+1))
+		# 	pub2.publish(4.1*torque/9.81*1000/(i+1))
+		# 	pub4.publish(4.1*torque/9.81*1000/(i+1))
 		# else:
 		# 	gazebo_link_states()
+
+		pub1.publish(sine_movement)
+		pub2.publish(sine_movement)
+		pub3.publish(sine_movement)
+		pub4.publish(sine_movement)
 
 		i = i+1
 

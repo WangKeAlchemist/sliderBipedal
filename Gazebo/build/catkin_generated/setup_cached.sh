@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/robin/Documents/slider_bipedal/Gazebo/build"
+export PWD="/home/robin/Documents/kewang/slider_bipedal/Gazebo/build"

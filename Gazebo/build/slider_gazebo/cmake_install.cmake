@@ -1,8 +1,8 @@
-# Install script for directory: /home/robin/Documents/slider_bipedal/Gazebo/src/slider_gazebo
+# Install script for directory: /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/slider_gazebo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robin/Documents/slider_bipedal/Gazebo/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robin/Documents/kewang/slider_bipedal/Gazebo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robin/Documents/slider_bipedal/Gazebo/build/slider_gazebo/catkin_generated/installspace/slider_gazebo.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/slider_gazebo/catkin_generated/installspace/slider_gazebo.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/slider_gazebo/cmake" TYPE FILE FILES
-    "/home/robin/Documents/slider_bipedal/Gazebo/build/slider_gazebo/catkin_generated/installspace/slider_gazeboConfig.cmake"
-    "/home/robin/Documents/slider_bipedal/Gazebo/build/slider_gazebo/catkin_generated/installspace/slider_gazeboConfig-version.cmake"
+    "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/slider_gazebo/catkin_generated/installspace/slider_gazeboConfig.cmake"
+    "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/slider_gazebo/catkin_generated/installspace/slider_gazeboConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/slider_gazebo" TYPE FILE FILES "/home/robin/Documents/slider_bipedal/Gazebo/src/slider_gazebo/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/slider_gazebo" TYPE FILE FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/src/slider_gazebo/package.xml")
 endif()
 

@@ -27,7 +27,7 @@
   <!-- Run joint position controllers if true -->
   <group if="$(arg position)">
     <!-- Include ros_control launch file to load joint position controllers -->
-    <include file="$(find slider_gazebo)/launch/slider_control.launch" />
+    <include file="$(find slider_gazebo)/launch/slider_position_control.launch" />
 
     <!-- Create node to control joint positions using joint controller -->
     <node name="slider_joint_positions_node" pkg="slider_gazebo" type="slider_position_controller.py" output="screen" respawn="true" />
@@ -36,7 +36,7 @@
   <!-- Run joint torque controllers if true -->
   <group if="$(arg torque)">
     <!-- Include ros_control launch file to load joint torque controllers -->
-    <include file="$(find slider_gazebo)/launch/slider_control_torque.launch" />
+    <include file="$(find slider_gazebo)/launch/slider_torque_control.launch" />
 
     <!-- Create node to control joint torques using effort controller -->
     <node name="slider_joint_torques_node" pkg="slider_gazebo" type="slider_torque_controller.py" output="screen" respawn="true" />

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/robin/Documents/slider_bipedal/Gazebo/src
+CMAKE_SOURCE_DIR = /home/robin/Documents/kewang/slider_bipedal/Gazebo/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/robin/Documents/slider_bipedal/Gazebo/build
+CMAKE_BINARY_DIR = /home/robin/Documents/kewang/slider_bipedal/Gazebo/build
 
 # Utility rule file for _catkin_empty_exported_target.
 
@@ -63,10 +63,10 @@ gazebo_ros_demos/rrbot_control/CMakeFiles/_catkin_empty_exported_target.dir/buil
 .PHONY : gazebo_ros_demos/rrbot_control/CMakeFiles/_catkin_empty_exported_target.dir/build
 
 gazebo_ros_demos/rrbot_control/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control && $(CMAKE_COMMAND) -P CMakeFiles/_catkin_empty_exported_target.dir/cmake_clean.cmake
 .PHONY : gazebo_ros_demos/rrbot_control/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 gazebo_ros_demos/rrbot_control/CMakeFiles/_catkin_empty_exported_target.dir/depend:
-	cd /home/robin/Documents/slider_bipedal/Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robin/Documents/slider_bipedal/Gazebo/src /home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/rrbot_control /home/robin/Documents/slider_bipedal/Gazebo/build /home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control /home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/robin/Documents/kewang/slider_bipedal/Gazebo/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/robin/Documents/kewang/slider_bipedal/Gazebo/src /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/rrbot_control /home/robin/Documents/kewang/slider_bipedal/Gazebo/build /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control /home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/rrbot_control/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gazebo_ros_demos/rrbot_control/CMakeFiles/_catkin_empty_exported_target.dir/depend
 

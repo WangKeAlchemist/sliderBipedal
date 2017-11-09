@@ -1,8 +1,8 @@
-# Install script for directory: /home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial
+# Install script for directory: /home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/robin/Documents/slider_bipedal/Gazebo/install")
+  set(CMAKE_INSTALL_PREFIX "/home/robin/Documents/kewang/slider_bipedal/Gazebo/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,25 +33,25 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial/catkin_generated/installspace/gazebo_tutorials.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial/catkin_generated/installspace/gazebo_tutorials.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_tutorials/cmake" TYPE FILE FILES
-    "/home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial/catkin_generated/installspace/gazebo_tutorialsConfig.cmake"
-    "/home/robin/Documents/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial/catkin_generated/installspace/gazebo_tutorialsConfig-version.cmake"
+    "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial/catkin_generated/installspace/gazebo_tutorialsConfig.cmake"
+    "/home/robin/Documents/kewang/slider_bipedal/Gazebo/build/gazebo_ros_demos/custom_plugin_tutorial/catkin_generated/installspace/gazebo_tutorialsConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_tutorials" TYPE FILE FILES "/home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_tutorials" TYPE FILE FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/package.xml")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_tutorials" TYPE DIRECTORY FILES "/home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_tutorials" TYPE DIRECTORY FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/launch")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_tutorials" TYPE DIRECTORY FILES "/home/robin/Documents/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/worlds")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_tutorials" TYPE DIRECTORY FILES "/home/robin/Documents/kewang/slider_bipedal/Gazebo/src/gazebo_ros_demos/custom_plugin_tutorial/worlds")
 endif()
 
